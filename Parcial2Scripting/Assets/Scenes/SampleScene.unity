@@ -133,6 +133,7 @@ GameObject:
   m_Component:
   - component: {fileID: 345251542}
   - component: {fileID: 345251541}
+  - component: {fileID: 345251543}
   m_Layer: 0
   m_Name: PrefabManager
   m_TagString: Untagged
@@ -171,6 +172,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &345251543
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 345251540}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1366bd7afc1eb3345bc844b74151512d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  contador: {fileID: 1708973180}
+  nomObj: {fileID: 1042303617}
 --- !u!1 &497202795
 GameObject:
   m_ObjectHideFlags: 0
@@ -496,8 +511,9 @@ GameObject:
   - component: {fileID: 914127212}
   - component: {fileID: 914127211}
   - component: {fileID: 914127215}
+  - component: {fileID: 914127216}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: Cubo
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -595,6 +611,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fuerza: 0.7
+--- !u!114 &914127216
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 914127210}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f7d1297d579c3849a86f5b7933ffc61, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nombre: Cubo
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -748,7 +777,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Nombre
+  m_Text: Cubo
 --- !u!222 &1042303618
 CanvasRenderer:
   m_ObjectHideFlags: 0
