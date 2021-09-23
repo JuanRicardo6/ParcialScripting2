@@ -93,7 +93,7 @@ GameObject:
   - component: {fileID: 6902747597206938674}
   - component: {fileID: 4456319900420376148}
   - component: {fileID: 2563268033741885720}
-  - component: {fileID: -6987895677974496639}
+  - component: {fileID: 7051516638048950053}
   m_Layer: 0
   m_Name: Oso
   m_TagString: Player
@@ -225,7 +225,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fuerza: 0.7
---- !u!114 &-6987895677974496639
+--- !u!114 &7051516638048950053
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
