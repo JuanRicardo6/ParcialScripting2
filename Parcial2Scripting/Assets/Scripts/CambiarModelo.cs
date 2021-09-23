@@ -4,60 +4,67 @@ using UnityEngine;
 
 public class CambiarModelo : MonoBehaviour
 {
-    [SerializeField] private Object[] Modelos;
+    public Object[] Modelos;
     [SerializeField] private Contador contador;
     private Object modAct;
-    private int pi;
-    // Start is called before the first frame update
+    public Object ModAct { get => modAct; set => modAct = value; }
+    private AsignarModelo asig;
+    private GenerarNumerosAleatorios num;
+
+    
+
     void Start()
     {
-        modAct = GameObject.FindGameObjectWithTag("Player");
+        
+        num = new GenerarNumerosAleatorios();
+
+        ModAct = GameObject.FindGameObjectWithTag("Player");
 
         contador.Cambio += CambioM;
 
-        pi = Random.Range(0, Modelos.Length);
+        
     }
 
     private void CambioM()
     {
-        int i= Random.Range(0, Modelos.Length);
-        if (pi != i)
+        
+        //verificar si los numeros aleatorios son diferentes
+        if (num.Pi != num.I)
         {
-            Destroy(GameObject.FindGameObjectWithTag("Player"));
-
-            modAct = Modelos[i];
-
-            Instantiate(modAct, this.transform.position, this.transform.rotation);
-
-            pi = i;
+            Asignar();
         }
         else
         {
-            i++;
-            if (i >= Modelos.Length)
-            {
-                i = i - 2;
-
-                Destroy(GameObject.FindGameObjectWithTag("Player"));
-
-                modAct = Modelos[i];
-
-                Instantiate(modAct, this.transform.position, this.transform.rotation);
-
-                pi = i;
-
-            }
-            else
-            {
-                Destroy(GameObject.FindGameObjectWithTag("Player"));
-
-                modAct = Modelos[i];
-
-                Instantiate(modAct, this.transform.position, this.transform.rotation);
-
-                pi = i;
-            }
+            num.I++;
+            VerificarI();
         }
 
     }
+    private void Asignar()
+    {
+
+        //destruir el objeto con el tag de player
+        Destroy(GameObject.FindGameObjectWithTag("Player"));
+        //asignando nuevo modelo actual e instanciandolo
+        ModAct = Modelos[num.I];
+
+        Instantiate(ModAct, this.transform.position, this.transform.rotation);
+        //asignando el valor i como el anterior valor de i
+        num.Pi = num.I;
+    }
+    private void VerificarI()
+    {
+        //verificar si el numero esta dentro del tamaño del arreglo
+        if (num.I >= Modelos.Length)
+        {
+            num.I = num.I - 2;
+
+           Asignar();
+        }
+        else
+        {
+           Asignar();
+        }
+    }
+
 }
