@@ -169,6 +169,69 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &441610938
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 441610940}
+  m_Layer: 0
+  m_Name: ControlarPantallas
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &441610940
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 441610938}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 506.1825, y: 302.54974, z: 664.1044}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &441929580
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 441929581}
+  m_Layer: 0
+  m_Name: Pantalla Inicio
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &441929581
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 441929580}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -44.317505, y: 43.049744, z: 664.1044}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1708973176}
+  - {fileID: 1042303616}
+  - {fileID: 448924170}
+  m_Father: {fileID: 497202799}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &448924169
 GameObject:
   m_ObjectHideFlags: 0
@@ -181,7 +244,6 @@ GameObject:
   - component: {fileID: 448924174}
   - component: {fileID: 448924173}
   - component: {fileID: 448924172}
-  - component: {fileID: 448924171}
   m_Layer: 5
   m_Name: BotonCambioF
   m_TagString: BotonC
@@ -196,35 +258,19 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 448924169}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 46}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -618.1044}
   m_LocalScale: {x: 1, y: 0.87494, z: 1}
   m_Children:
   - {fileID: 555117520}
-  m_Father: {fileID: 497202799}
-  m_RootOrder: 3
+  m_Father: {fileID: 441929581}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -103, y: -110}
+  m_AnchoredPosition: {x: -58.682495, y: -153.04974}
   m_SizeDelta: {x: 112.8, y: 47.5}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &448924171
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 448924169}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cbea2ea915dc76542abf348a25019746, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  FinJuego: 3
-  Fin: {fileID: 1271122206}
-  Inicio: {fileID: 448924172}
-  PantallaFin: {fileID: 1984831412}
 --- !u!114 &448924172
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -269,9 +315,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 448924171}
+      - m_Target: {fileID: 11400000, guid: 5af5cc262a483984ba613742440f0e5d, type: 2}
         m_TargetAssemblyTypeName: Contador, Assembly-CSharp
-        m_MethodName: ButtonClick
+        m_MethodName: ContadorBoton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -411,9 +457,7 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 518827242}
-  - {fileID: 1042303616}
-  - {fileID: 1708973176}
-  - {fileID: 448924170}
+  - {fileID: 441929581}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -437,7 +481,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &518827242
 RectTransform:
   m_ObjectHideFlags: 0
@@ -831,16 +875,16 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1042303615}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -664.1044}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 497202799}
+  m_Father: {fileID: 441929581}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -27}
+  m_AnchoredPosition: {x: 44.317505, y: 189.45026}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &1042303617
@@ -1284,17 +1328,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1708973175}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 46}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -618.1044}
   m_LocalScale: {x: 1, y: 0.87494, z: 1}
   m_Children:
   - {fileID: 1260347645}
-  m_Father: {fileID: 497202799}
-  m_RootOrder: 2
+  m_Father: {fileID: 441929581}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 110, y: -110}
+  m_AnchoredPosition: {x: 154.3175, y: -153.04974}
   m_SizeDelta: {x: 112.8, y: 47.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1708973177
@@ -1344,6 +1388,18 @@ MonoBehaviour:
       - m_Target: {fileID: 1708973180}
         m_TargetAssemblyTypeName: PresionarCM, Assembly-CSharp
         m_MethodName: ButtonClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 11400000, guid: 5af5cc262a483984ba613742440f0e5d, type: 2}
+        m_TargetAssemblyTypeName: Contador, Assembly-CSharp
+        m_MethodName: ContadorBoton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
