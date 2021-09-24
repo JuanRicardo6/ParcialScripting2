@@ -345,9 +345,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b47f41edcd6479844a09e0c6e60efbe3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ini: {fileID: 0}
-  segunfin: {fileID: 0}
-  cont: {fileID: 0}
+  cont: {fileID: 11400000, guid: 5af5cc262a483984ba613742440f0e5d, type: 2}
+  estadoActual:
+  - {fileID: 11400000, guid: bdfb1d4b3c74d564db4cefa27b533bd9, type: 2}
+  - {fileID: 11400000, guid: 7e3735948a7086d46b8810c70b3fb7d1, type: 2}
 --- !u!4 &441610940
 Transform:
   m_ObjectHideFlags: 0

@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Estado 2
   m_EditorClassIdentifier: 
   PantallaInicio: 0
-  PantallaFinal: 0
+  PantallaFinal: 1
   ini: {fileID: 0}
   segunfin: {fileID: 0}

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd97661cc1995b348905ed804373c774, type: 3}
   m_Name: Estado 1
   m_EditorClassIdentifier: 
-  PantallaInicio: 0
+  PantallaInicio: 1
   PantallaFinal: 0
   ini: {fileID: 0}
   segunfin: {fileID: 0}
