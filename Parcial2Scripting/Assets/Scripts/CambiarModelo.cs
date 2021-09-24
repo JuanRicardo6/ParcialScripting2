@@ -4,38 +4,36 @@ using UnityEngine;
 
 public class CambiarModelo : MonoBehaviour
 {
-    public Object[] Modelos;
-    [SerializeField] private Contador contador;
-    private Object modAct;
-    public Object ModAct { get => modAct; set => modAct = value; }
-    private AsignarModelo asig;
-    private GenerarNumerosAleatorios num;
+    [SerializeField]private GenerarPersonajes Modelos;
+    [SerializeField]private Canal canal;
+    private MeshFilter modAct;
+    [SerializeField]private GenerarNumerosAleatorios num;
 
     
 
-    void Start()
+    void Awake()
     {
-        
-        num = new GenerarNumerosAleatorios();
 
-        ModAct = GameObject.FindGameObjectWithTag("Player");
 
-        contador.Cambio += CambioM;
+        num.GenerarNumeros(Modelos.personajes.Length);
 
-        
+        modAct = GameObject.FindGameObjectWithTag("Player").GetComponent<MeshFilter>();
+
+        canal.Cambiado += CambioM;
+     
     }
 
     private void CambioM()
     {
         
         //verificar si los numeros aleatorios son diferentes
-        if (num.Pi != num.I)
+        if (num.pi != num.i)
         {
             Asignar();
         }
         else
         {
-            num.I++;
+            num.i++;
             VerificarI();
         }
 
@@ -43,21 +41,20 @@ public class CambiarModelo : MonoBehaviour
     private void Asignar()
     {
 
-        //destruir el objeto con el tag de player
-        Destroy(GameObject.FindGameObjectWithTag("Player"));
-        //asignando nuevo modelo actual e instanciandolo
-        ModAct = Modelos[num.I];
 
-        Instantiate(ModAct, this.transform.position, this.transform.rotation);
+        //asignando nuevo modelo actual e instanciandolo
+        modAct.mesh = Modelos.personajes[num.i];
+
+       // Instantiate(modAct, this.transform.position, this.transform.rotation);
         //asignando el valor i como el anterior valor de i
-        num.Pi = num.I;
+        num.pi = num.i;
     }
     private void VerificarI()
     {
         //verificar si el numero esta dentro del tamaño del arreglo
-        if (num.I >= Modelos.Length)
+        if (num.i >= Modelos.personajes.Length)
         {
-            num.I = num.I - 2;
+            num.i = num.i - Random.Range(2,4);
 
            Asignar();
         }
