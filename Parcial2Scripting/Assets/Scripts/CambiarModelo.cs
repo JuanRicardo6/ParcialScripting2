@@ -2,12 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CambiarModelo : MonoBehaviour
+public class CambiarModelo : MonoBehaviour, IAsignarVariable, IVerificarVariable
 {
-    [SerializeField]private GenerarPersonajes Modelos;
-    [SerializeField]private Canal canal;
+    [SerializeField] private GenerarPersonajes Modelos;
+    [SerializeField] private Canal canal;
+    [SerializeField] private GenerarNumerosAleatorios num;
     private MeshFilter modAct;
-    [SerializeField]private GenerarNumerosAleatorios num;
 
     
 
@@ -38,18 +38,15 @@ public class CambiarModelo : MonoBehaviour
         }
 
     }
-    private void Asignar()
+     public void  Asignar()
     {
-
 
         //asignando nuevo modelo actual e instanciandolo
         modAct.mesh = Modelos.personajes[num.i];
-
-       // Instantiate(modAct, this.transform.position, this.transform.rotation);
         //asignando el valor i como el anterior valor de i
         num.pi = num.i;
     }
-    private void VerificarI()
+     public void VerificarI()
     {
         //verificar si el numero esta dentro del tamaño del arreglo
         if (num.i >= Modelos.personajes.Length)
