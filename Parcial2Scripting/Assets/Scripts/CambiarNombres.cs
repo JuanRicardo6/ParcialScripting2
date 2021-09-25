@@ -43,7 +43,7 @@ public class CambiarNombres : MonoBehaviour , IAsignarVariable, IVerificarVariab
         //verificar si el numero esta dentro del tamaño del arreglo
         if (num.i >= nombres.nombres.Length)
         {
-            num.i = num.i - Random.Range(2, 4);
+            num.i = num.i - Random.Range(2, nombres.nombres.Length+1);
 
             Asignar();
         }

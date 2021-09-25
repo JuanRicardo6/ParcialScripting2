@@ -51,7 +51,7 @@ public class CambiarModelo : MonoBehaviour, IAsignarVariable, IVerificarVariable
         //verificar si el numero esta dentro del tamaño del arreglo
         if (num.i >= Modelos.personajes.Length)
         {
-            num.i = num.i - Random.Range(2,4);
+            num.i = num.i - Random.Range(2, Modelos.personajes.Length+1);
 
            Asignar();
         }

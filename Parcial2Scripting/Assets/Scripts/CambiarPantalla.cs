@@ -12,7 +12,7 @@ public class CambiarPantalla : MonoBehaviour
    
     
     // Llama al estado guardado en la primara posicion y llama la funcion de ese estado. Suscribe la funcion Cambiop al evento cp.
-    void Awake()
+    void Start()
     {
         estadoActual[i].PantallaActual();
         cont.cp += CambioP;
