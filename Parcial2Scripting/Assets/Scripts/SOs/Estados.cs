@@ -9,8 +9,8 @@ public class Estados : ScriptableObject
 
     public bool PantallaInicio;
     public bool PantallaFinal;
-    private Canvas ini;
-    private Canvas segunfin;
+    public Canvas ini;
+    public Canvas segunfin;
     void Awake()
     {
         ini = GameObject.FindGameObjectWithTag("Pantallaini").GetComponent<Canvas>();
