@@ -23,7 +23,7 @@ public class Contador : ScriptableObject
     {
         contador++;
         Debug.Log("Puntos: " + contador);
-
+       
         if (contador >= 10)
         {
             // dispara el evento cp y reinicia el contador.
