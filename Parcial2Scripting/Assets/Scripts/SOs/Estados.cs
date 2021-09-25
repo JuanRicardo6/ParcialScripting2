@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 [CreateAssetMenu(fileName = "Estado")]
 public class Estados : ScriptableObject
@@ -8,8 +9,8 @@ public class Estados : ScriptableObject
 
     public bool PantallaInicio;
     public bool PantallaFinal;
-    public Canvas ini;
-    public Canvas segunfin;
+    private Canvas ini;
+    private Canvas segunfin;
     void Awake()
     {
         ini = GameObject.FindGameObjectWithTag("Pantallaini").GetComponent<Canvas>();

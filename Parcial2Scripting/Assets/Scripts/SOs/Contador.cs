@@ -16,7 +16,7 @@ public class Contador : ScriptableObject
 
     void Awake()
     {
-        contador = 0;
+        
         canal.Cambiado += ContadorBoton;
     }
     public void ContadorBoton()
